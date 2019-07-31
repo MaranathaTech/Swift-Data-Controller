@@ -7,6 +7,7 @@ A simple swift class to manage URL requests to a custom API, WooCommerce API &am
 Import AppDataController.swift into your Xcode project.
 
 Set variables:
+
     let apiURL
     let user
     let key
@@ -14,12 +15,14 @@ Set variables:
     let wooURL
 
 Make requests using:
+```
 AppDataController.shared.request()
 AppDataController.shared.checkWCInStock(id:String, variation:String)
 AppDataController.shared.removeFromWCStock(id:String, variation:String, stock:Int)
 AppDataController.shared.writeWCOrder(orderData:[String:Any])
 AppDataController.shared.updateWCOrder(orderNum:String, status:String
 AppDataController.shared.submitStripeTokenToBackend(headers:[String:String])
+```
 
 ### Prerequisites
 
