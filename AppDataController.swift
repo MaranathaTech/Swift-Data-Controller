@@ -1,6 +1,5 @@
 //
 //  AppDataController.swift
-//  Wrath and Grace
 //
 //  Created by Ernie Lail on 11/26/18.
 //  Copyright ¬© 2018 Development. All rights reserved.
