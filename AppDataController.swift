@@ -8,8 +8,6 @@
 import UIKit
 import Alamofire
 
-
-
 class AppDataController: NSObject {
 
     //API URL
@@ -24,18 +22,12 @@ class AppDataController: NSObject {
     //User Secret
     let secret = "your-secret"
 
-	//WooCommerce API URL
+    //WooCommerce API URL
     let wooURL = "https://www.your-woocommerce-api-url.com"
-
-    
     
     //Initialize Singleton 
     static let shared = AppDataController()
 
-    
-    
-    
-    
     
     //Generic API Request Function
     func request( with completion:@escaping ([String:Any]) -> ()) {
@@ -64,15 +56,10 @@ class AppDataController: NSObject {
                     result = ["Error":"No Response From Server"];
                     completion(result);
                 }
-            })
+        })
         
     }
-        
-        
-    
-    
-    
-    
+
     
     //check website for stock
     func checkWCInStock(id:String, variation:String, with completion:@escaping ([String:Any]) -> ()) {
@@ -113,10 +100,6 @@ class AppDataController: NSObject {
         })
         
     }
-    
-    
-    
-    
     
     
     func removeFromWCStock(id:String, variation:String, stock:Int) {
@@ -164,12 +147,7 @@ class AppDataController: NSObject {
         })
         
     }
-    
-    
-    
-    
-    
-    
+
     
     //write new order to Woocommerce
     func writeWCOrder(jsonData:[String:Any], with completion:@escaping ([String:Any]) -> ()) {
@@ -205,11 +183,7 @@ class AppDataController: NSObject {
         })
         
     }
-    
-    
-    
-    
-    
+
     
     //write new order to Woocommerce
     func updateWCOrder(orderNum:String, status:String, with completion:@escaping ([String:Any]) -> ()) {
@@ -245,12 +219,7 @@ class AppDataController: NSObject {
         
     }
     
-    
-    
-    
-    
-    
-    
+
     func submitStripeTokenToBackend(headers:[String:String], completion:@escaping ([String:Any]) -> ()){
         
         var result = [String : Any]()
@@ -281,10 +250,6 @@ class AppDataController: NSObject {
     }
     
     
-    
-    
-    
-    
-    
+
     
 }
